@@ -17,8 +17,7 @@ import Marker._
 
 class Board(size: Int) {
 
-    /* These are the only mutable objects in the entire class */
-    /* The current board's state */
+    // The current board's state
     var board = List.tabulate(size, size) { (m, n) => EMPTY }
 
     override def toString() = board.map{
@@ -64,7 +63,6 @@ while (!game.boardFull() && !game.boardWon()) {
   currentMove = if (currentMove == X) O else X
   println("\nThe board:\n")
   println(game)
-  // println(game.printMoves())
   print("\nIt's " + currentMove + "'s turn! Enter a location: ")
  
   val index = Console.readInt()
