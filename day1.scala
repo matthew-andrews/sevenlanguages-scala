@@ -2,6 +2,7 @@
  * TIC TAC TOE
  *
  * Heavily influenced by Jim (http://brikis98.blogspot.co.uk/2012/03/seven-languages-in-seven-weeks-scala.html)
+ * Also some thanks to @samgiles
  *
  * @author Matt Andrews <code@mattandre.ws>
  */
