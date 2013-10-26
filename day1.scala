@@ -39,8 +39,6 @@ class Board(size: Int) {
         if (m == 0) board(n)(n) else board(size - 1 - n)(n)
     }
 
-    def spacer(value: String) = " " * (size.toString.length - value.length + 2)
-
     def boardFull() = board.flatten.count(_ == EMPTY) == 0
 
     def allEqual(elements: List[Marker]) = !elements.contains(EMPTY) && elements.distinct.size == 1
