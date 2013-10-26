@@ -20,9 +20,16 @@ class Board(size: Int) {
     // The current board's state
     var board = List.tabulate(size, size) { (m, n) => EMPTY }
 
-    override def toString() = board.map{
-      _.mkString(", ")
-    }.mkString("\n")
+    override def toString() = {
+      List.tabulate(size, size) {
+        (i, j) => {
+          if (board(i)(j) == EMPTY) (j * size + i).toString
+          else board(i)(j)
+        }
+      }.map {
+        _.mkString(", ")
+      }.mkString("\n")
+    }
 
     def rows() = board
 
@@ -78,6 +85,3 @@ if (game.boardWon()) {
 } else {
   println("It's a draw!")
 }
- 
-println()
-println(game)
