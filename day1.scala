@@ -16,8 +16,6 @@ object Marker extends Enumeration {
 import Marker._
 
 class Board(size: Int) {
-
-    // The current board's state
     var board = List.tabulate(size, size) { (m, n) => EMPTY }
 
     override def toString() = {
@@ -54,10 +52,10 @@ class Board(size: Int) {
         board = List.tabulate(size, size) { (m, n) =>
           if (x == m && y == n) marker else board(m)(n)
         }
-        return true
+        true
+      } else {
+        false
       }
-      
-      false
     }
 }
 
