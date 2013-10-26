@@ -69,15 +69,8 @@ while (!game.boardFull && !game.boardWon) {
   print("\nIt's " + currentMove + "'s turn! Enter a location: ")
  
   val index = Console.readInt
-  if (!game.placeMarker(index, currentMove)) {
-    println("Invalid location!")    
-  }
+  if (!game.placeMarker(index, currentMove)) println("Invalid location!")
 }
 
-println
- 
-if (game.boardWon) {
-  println("Player " + currentMove + " wins!")
-} else {
-  println("It's a draw!")
-}
+if (game.boardWon) println("Player " + currentMove + " wins!")
+else println("It's a draw!")
